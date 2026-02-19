@@ -1,159 +1,92 @@
 document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
 
-    // Custom Cursor
-    const cursor = document.getElementById('cursor');
-    if (cursor) {
-        window.addEventListener('mousemove', (e) => {
-            gsap.to(cursor, {
-                x: e.clientX,
-                y: e.clientY,
-                duration: 0.3,
-                ease: 'power2.out'
-            });
-        });
-    }
-
-    // Kinetic Typography
-    const lines = document.querySelectorAll('.kinetic-line');
-    lines.forEach(line => {
-        const text = line.textContent;
-        line.innerHTML = '';
-        text.split('').forEach(char => {
-            const span = document.createElement('span');
-            span.textContent = char === ' ' ? '\u00A0' : char;
-            span.className = 'char';
-            line.appendChild(span);
-        });
-
-        const chars = line.querySelectorAll('.char');
-        gsap.from(chars, {
-            y: 100,
-            opacity: 0,
-            rotateX: -90,
-            stagger: 0.05,
-            duration: 1,
-            ease: 'power4.out',
-            scrollTrigger: {
-                trigger: line,
-                start: 'top 80%',
-            }
-        });
-
-        gsap.to(chars, {
-            scrollTrigger: {
-                trigger: line,
-                start: 'top top',
-                end: 'bottom top',
-                scrub: 1,
-            },
-            y: -50,
-            opacity: 0.3,
-            stagger: 0.02,
-        });
-    });
-
-    // Path SVG Animation
-    const paths = document.querySelectorAll('#path-svg path');
-    paths.forEach(path => {
-        const length = path.getTotalLength();
-        gsap.set(path, {
-            strokeDasharray: length,
-            strokeDashoffset: length
-        });
-        gsap.to(path, {
-            strokeDashoffset: 0,
-            scrollTrigger: {
-                trigger: path,
-                start: 'top 80%',
-                end: 'bottom 20%',
-                scrub: 1,
-            }
-        });
-    });
-
-    // Horizontal Scroll for Jobs
-    const scrollContainer = document.getElementById('scroll-container');
-    const jobCards = document.querySelectorAll('.job-card');
-    if (scrollContainer && jobCards.length > 0) {
-        gsap.to(jobCards, {
-            x: () => -(scrollContainer.scrollWidth - window.innerWidth + 48),
-            ease: 'none',
-            scrollTrigger: {
-                trigger: "#jobs",
-                start: "top top",
-                end: () => "+=" + (scrollContainer.scrollWidth),
-                scrub: 1,
-                pin: true,
-                anticipatePin: 1,
-            }
-        });
-    }
-
-    // Stats Counter
-    const counters = document.querySelectorAll('.counter');
-    counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        gsap.to(counter, {
-            innerText: target,
-            duration: 2,
-            snap: { innerText: 1 },
-            scrollTrigger: {
-                trigger: counter,
-                start: 'top 90%',
-            }
-        });
-    });
-
-    // Parallax
-    gsap.utils.toArray('.parallax').forEach(element => {
-        gsap.to(element, {
-            y: -100,
-            scrollTrigger: {
-                trigger: element,
-                start: 'top bottom',
-                end: 'bottom top',
-                scrub: true
-            }
-        });
-    });
-
-    // Entrance Animation for Services
-    gsap.from('#services .group', {
+    // Hero Section Animations
+    gsap.from("#hero-title", {
         y: 50,
+        opacity: 0,
+        duration: 1,
+        ease: "power3.out"
+    });
+
+    gsap.from("#hero-image", {
+        x: 100,
+        opacity: 0,
+        duration: 1.2,
+        ease: "power3.out",
+        delay: 0.2
+    });
+
+    // Trusted By Animation
+    gsap.from("#trusted-by div > div", {
+        y: 20,
         opacity: 0,
         stagger: 0.1,
         duration: 0.8,
-        ease: 'power3.out',
+        ease: "power2.out",
         scrollTrigger: {
-            trigger: '#services',
-            start: 'top 70%',
+            trigger: "#trusted-by",
+            start: "top 90%",
         }
     });
 
-    // Entrance Animation for Trusted By
-    gsap.from('.opacity-50 > div', {
-        y: 20,
+    // About Section Animation
+    gsap.from("#about-images", {
+        x: -50,
         opacity: 0,
-        stagger: 0.05,
-        duration: 0.5,
-        ease: 'power2.out',
+        duration: 1,
+        ease: "power3.out",
         scrollTrigger: {
-            trigger: '.opacity-50',
-            start: 'top 90%',
+            trigger: "#about",
+            start: "top 70%",
         }
     });
 
-    // Entrance for How It Works cards
-    gsap.from('#how-it-works .group .p-8', {
-        scale: 0.9,
+    gsap.from("#about-content", {
+        x: 50,
         opacity: 0,
-        duration: 0.6,
+        duration: 1,
+        ease: "power3.out",
+        scrollTrigger: {
+            trigger: "#about",
+            start: "top 70%",
+        }
+    });
+
+    // Services Grid Animation
+    gsap.from(".service-card", {
+        y: 50,
+        opacity: 0,
         stagger: 0.2,
-        ease: 'back.out(1.7)',
+        duration: 0.8,
+        ease: "power3.out",
         scrollTrigger: {
-            trigger: '#how-it-works', // I should add this ID
-            start: 'top 80%',
+            trigger: "#services-grid",
+            start: "top 80%",
+        }
+    });
+
+    // How It Works Animation
+    gsap.from(".step-card", {
+        scale: 0.8,
+        opacity: 0,
+        stagger: 0.3,
+        duration: 1,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: "#how-it-works-grid",
+            start: "top 80%",
+        }
+    });
+
+    // Parallax Effect for Badge
+    gsap.to(".parallax", {
+        y: -30,
+        scrollTrigger: {
+            trigger: "#hero-image",
+            start: "top bottom",
+            end: "bottom top",
+            scrub: true
         }
     });
 });
