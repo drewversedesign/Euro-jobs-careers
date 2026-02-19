@@ -3,14 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Custom Cursor
     const cursor = document.getElementById('cursor');
-    window.addEventListener('mousemove', (e) => {
-        gsap.to(cursor, {
-            x: e.clientX,
-            y: e.clientY,
-            duration: 0.3,
-            ease: 'power2.out'
+    if (cursor) {
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
         });
-    });
+    }
 
     // Kinetic Typography
     const lines = document.querySelectorAll('.kinetic-line');
@@ -73,19 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
     // Horizontal Scroll for Jobs
     const scrollContainer = document.getElementById('scroll-container');
     const jobCards = document.querySelectorAll('.job-card');
-
-    gsap.to(jobCards, {
-        x: () => -(scrollContainer.scrollWidth - window.innerWidth + 48), // 48 is for padding
-        ease: 'none',
-        scrollTrigger: {
-            trigger: "#jobs",
-            start: "top top",
-            end: () => "+=" + (scrollContainer.scrollWidth),
-            scrub: 1,
-            pin: true,
-            anticipatePin: 1,
-        }
-    });
+    if (scrollContainer && jobCards.length > 0) {
+        gsap.to(jobCards, {
+            x: () => -(scrollContainer.scrollWidth - window.innerWidth + 48),
+            ease: 'none',
+            scrollTrigger: {
+                trigger: "#jobs",
+                start: "top top",
+                end: () => "+=" + (scrollContainer.scrollWidth),
+                scrub: 1,
+                pin: true,
+                anticipatePin: 1,
+            }
+        });
+    }
 
     // Stats Counter
     const counters = document.querySelectorAll('.counter');
@@ -113,5 +116,44 @@ document.addEventListener('DOMContentLoaded', () => {
                 scrub: true
             }
         });
+    });
+
+    // Entrance Animation for Services
+    gsap.from('#services .group', {
+        y: 50,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '#services',
+            start: 'top 70%',
+        }
+    });
+
+    // Entrance Animation for Trusted By
+    gsap.from('.opacity-50 > div', {
+        y: 20,
+        opacity: 0,
+        stagger: 0.05,
+        duration: 0.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.opacity-50',
+            start: 'top 90%',
+        }
+    });
+
+    // Entrance for How It Works cards
+    gsap.from('#how-it-works .group .p-8', {
+        scale: 0.9,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: 'back.out(1.7)',
+        scrollTrigger: {
+            trigger: '#how-it-works', // I should add this ID
+            start: 'top 80%',
+        }
     });
 });

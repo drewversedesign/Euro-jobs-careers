@@ -21,3 +21,17 @@
     background: rgba(255, 215, 0, 0.3);
     color: #003399;
 }
+
+.bg-grid-pattern {
+    background-image: radial-gradient(circle, rgba(0, 51, 153, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.animate-bounce-slow {
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}

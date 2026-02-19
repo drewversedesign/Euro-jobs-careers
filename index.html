@@ -34,10 +34,10 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 px-6 min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 min-h-[90vh] flex items-center overflow-hidden">
         <!-- Background Path SVG -->
-        <svg id="path-svg" class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id="path-svg" class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 400 Q 300 200, 600 400 T 1200 400" stroke="#003399" stroke-width="2" />
             <path d="M0 500 Q 400 300, 800 500 T 1200 500" stroke="#FFD700" stroke-width="2" />
             <path d="M0 300 Q 200 100, 400 300 T 800 300 Q 1000 200, 1200 300" stroke="#708090" stroke-width="1.5" />
@@ -48,34 +48,82 @@
             <circle cx="800" cy="500" r="4" fill="#FFD700" />
         </svg>
 
-        <div class="container mx-auto relative z-10 text-center">
-            <span class="inline-block mb-6 px-3 py-1 bg-[#FFD700]/20 text-[#003399] border border-[#FFD700]/30 rounded-full text-sm font-medium">
-                Connecting Talent Across Europe
-            </span>
-            <div id="hero-text" class="mb-8">
-                <h1 class="text-6xl md:text-8xl font-bold text-gray-900 mb-4 leading-tight">
-                    <div class="kinetic-line">Your Career</div>
-                    <div class="kinetic-line">Path Starts</div>
-                    <div class="kinetic-line text-[#003399]">Here</div>
-                </h1>
-            </div>
-            <p class="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
-                Navigate seamless career transitions across European borders with our premium recruitment services. Your journey to extraordinary opportunities begins now.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <button class="bg-[#003399] text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-[#002a80] transition-all flex items-center">
-                    Explore Opportunities
-                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
-                </button>
-                <button class="border border-[#003399] text-[#003399] px-8 py-4 rounded-md text-lg font-bold hover:bg-[#003399]/10 transition-all">
-                    For Employers
-                </button>
+        <div class="container mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-left">
+                    <span class="inline-block mb-6 px-3 py-1 bg-[#003399]/10 text-[#003399] border border-[#003399]/20 rounded-full text-sm font-medium">
+                        <i data-lucide="map-pin" class="inline-block w-4 h-4 mr-1 align-text-bottom"></i>
+                        WHERE TALENT MEETS OPPORTUNITY
+                    </span>
+                    <div id="hero-text" class="mb-8">
+                        <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                            <div class="kinetic-line">Shaping The</div>
+                            <div class="kinetic-line text-[#003399]">Future And</div>
+                            <div class="kinetic-line">Your Business</div>
+                        </h1>
+                    </div>
+                    <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-xl leading-relaxed">
+                        At Euro-jobs-careers, we specialize in connecting top-tier talent with industry-leading companies. Whether you're a candidate or a business, we have the path for you.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 items-start">
+                        <button class="bg-[#003399] text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-[#002a80] transition-all flex items-center">
+                            Explore Opportunities
+                            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200" alt="Team working" class="w-full h-auto">
+                    </div>
+                    <!-- Decorative background for image -->
+                    <div class="absolute -top-10 -right-10 w-full h-full border-2 border-[#FFD700] rounded-3xl -z-0"></div>
+
+                    <!-- Floating Card -->
+                    <div class="absolute -bottom-10 -left-10 bg-white p-6 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-4 max-w-xs z-20 parallax">
+                        <div class="w-14 h-14 bg-[#FFD700] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <i data-lucide="check" class="text-[#003399] w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-900">12+ Years Experience</p>
+                            <p class="text-xs text-gray-500">Helping the European community grow.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Decorative Elements -->
-        <div class="absolute top-1/4 left-10 w-32 h-32 bg-[#FFD700]/10 rounded-full blur-3xl parallax"></div>
-        <div class="absolute bottom-1/4 right-10 w-40 h-40 bg-[#003399]/10 rounded-full blur-3xl parallax"></div>
+    <!-- Trusted By Section -->
+    <section class="py-12 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="zap" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">Boltshift</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="sun" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">Nietzsche</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="coffee" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">Epicurious</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="cloud" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">CloudWatch</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="feather" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">FeatherDev</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="target" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">Acme Corp</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Stats Section -->
@@ -106,6 +154,174 @@
                     </div>
                     <p class="text-gray-500 text-sm md:text-base">Client Satisfaction</p>
                 </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <!-- Image Cluster -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1522071823991-b99777152413?q=80&w=600" alt="Team meeting" class="rounded-2xl shadow-lg w-full h-64 object-cover parallax">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600" alt="Collaboration" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                        </div>
+                        <div class="pt-12">
+                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=600" alt="Office space" class="rounded-2xl shadow-lg w-full h-80 object-cover parallax">
+                        </div>
+                    </div>
+                    <!-- Decorative element -->
+                    <div class="absolute -z-10 top-0 left-0 w-full h-full bg-[#FFD700]/5 rounded-3xl blur-3xl"></div>
+                </div>
+                <div class="text-left">
+                    <span class="inline-block mb-6 px-3 py-1 bg-[#003399]/10 text-[#003399] border border-[#003399]/20 rounded-full text-sm font-medium">
+                        ABOUT EURO-JOBS-CAREERS
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Elevate Your Workforce, <span class="text-[#003399]">Elevate Your Business</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        At Euro-jobs-careers, we understand that the key to business success lies in having the right people on your team. That's why we're committed to connecting you with top-tier talent that matches your vision.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-[#003399] rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="text-white w-4 h-4"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Tailored Staffing Solutions</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-[#003399] rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="text-white w-4 h-4"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Ongoing Support</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-[#003399] rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="text-white w-4 h-4"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Streamlined Hiring Process</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-[#003399] rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="text-white w-4 h-4"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Expert Recruitment Team</span>
+                        </div>
+                    </div>
+                    <button class="bg-[#003399] text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-[#002a80] transition-all flex items-center">
+                        JOIN OUR NETWORK
+                        <i data-lucide="users" class="ml-2 w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-gray-50 bg-grid-pattern">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block mb-4 px-3 py-1 bg-[#003399]/10 text-[#003399] border border-[#003399]/20 rounded-full text-sm font-medium">
+                    OUR SERVICE AREAS
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Tailored Solutions For Your Hiring Needs</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=600" alt="Accounting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 01</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">ACCOUNTING FINANCE</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Tailored solutions that align with your objectives. From temporary staffing to permanent placements.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" alt="Digital Marketing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 02</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">DIGITAL MARKETING</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Our services encompass every stage of the hiring process, from identifying to selecting top marketing talent.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600" alt="Business Consulting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 03</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">BUSINESS CONSULTING</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">We understand that every business is unique, which is why we take a bespoke approach to your consulting needs.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600" alt="Technology Services" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 04</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">TECHNOLOGY SERVICES</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">We leverage our extensive network, industry expertise, and cutting-edge technology to find your IT specialists.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600" alt="Logistics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 05</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">LOGISTICS SERVICES</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Our team of expert recruiters works closely with you to understand your logistical requirements.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2959213?q=80&w=600" alt="Front Line" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 06</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">FRONT LINE SUPPORT</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">We provide flexible staffing solutions that can scale with your business and support your operations.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="bg-[#003399] text-white px-8 py-3 rounded-md font-bold hover:bg-[#002a80] transition-all">
+                    VIEW MORE SERVICES
+                </button>
             </div>
         </div>
     </section>
@@ -205,35 +421,49 @@
         </div>
     </section>
 
-    <!-- How It Works Section -->
-    <section class="py-20 px-6 bg-gray-50">
+        <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24 px-6 bg-white">
         <div class="container mx-auto">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Your Journey, Simplified</h2>
-                <p class="text-xl text-gray-600">Three simple steps to your dream European career</p>
+                <span class="inline-block mb-4 px-3 py-1 bg-[#003399]/10 text-[#003399] border border-[#003399]/20 rounded-full text-sm font-medium uppercase tracking-wider">
+                    HOW IT WORKS
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Simple Staffing Procedures</h2>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-                <div class="text-center parallax">
-                    <div class="w-20 h-20 bg-[#003399]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-3xl font-bold text-[#003399]">1</span>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Step 1 -->
+                <div class="relative group">
+                    <div class="w-10 h-10 bg-[#003399] text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 relative z-10 shadow-lg">1</div>
+                    <div class="rounded-2xl overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=600" alt="Job Analysis" class="w-full h-48 object-cover">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Create Your Profile</h3>
-                    <p class="text-gray-500 leading-relaxed">Share your experience, skills, and career aspirations with our team of expert recruiters.</p>
+                    <div class="p-8 border border-gray-100 bg-gray-50 rounded-2xl text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">JOB ANALYSIS</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Job analysis is a critical process for understanding and defining specific requirements.</p>
+                    </div>
                 </div>
-                <div class="text-center parallax">
-                    <div class="w-20 h-20 bg-[#FFD700]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-3xl font-bold text-[#FFD700]">2</span>
+                <!-- Step 2 -->
+                <div class="relative group">
+                    <div class="w-10 h-10 bg-[#003399] text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 relative z-10 shadow-lg">2</div>
+                    <div class="rounded-2xl overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600" alt="Applicant Review" class="w-full h-48 object-cover">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Get Matched</h3>
-                    <p class="text-gray-500 leading-relaxed">Our AI-powered platform connects you with opportunities that align perfectly with your goals.</p>
+                    <div class="p-8 bg-[#003399] text-white rounded-2xl text-center shadow-xl transform scale-105 z-10 relative">
+                        <h3 class="text-xl font-bold mb-4">APPLICANT REVIEW</h3>
+                        <p class="text-white/80 text-sm leading-relaxed">The applicant review process is a vital step in ensuring that only the best talent is selected.</p>
+                    </div>
                 </div>
-                <div class="text-center parallax">
-                    <div class="w-20 h-20 bg-[#003399]/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span class="text-3xl font-bold text-[#003399]">3</span>
+                <!-- Step 3 -->
+                <div class="relative group">
+                    <div class="w-10 h-10 bg-[#003399] text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 relative z-10 shadow-lg">3</div>
+                    <div class="rounded-2xl overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1600880212340-02d956ea202c?q=80&w=600" alt="Job Place Check" class="w-full h-48 object-cover">
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Start Your Journey</h3>
-                    <p class="text-gray-500 leading-relaxed">Receive comprehensive support through interviews, negotiations, and relocation.</p>
+                    <div class="p-8 border border-gray-100 bg-gray-50 rounded-2xl text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">JOB PLACE CHECK</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Job Place Check is an essential component of our Euro-jobs-careers recruitment process.</p>
+                    </div>
                 </div>
             </div>
         </div>
