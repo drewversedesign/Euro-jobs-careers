@@ -1,0 +1,23 @@
+.kinetic-line {
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.char {
+    display: inline-block;
+    transform-origin: center bottom;
+}
+
+#scroll-container {
+    cursor: grab;
+}
+
+#scroll-container:active {
+    cursor: grabbing;
+}
+
+/* Custom selection color */
+::selection {
+    background: rgba(255, 215, 0, 0.3);
+    color: #003399;
+}
