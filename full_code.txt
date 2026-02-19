@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euro-jobs-careers - Your Path to European Opportunities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#f8f9fa] text-[#1a1a1a] font-sans antialiased overflow-x-hidden">
+    <!-- Custom Cursor -->
+    <div id="cursor" class="fixed w-8 h-8 pointer-events-none z-50 mix-blend-difference hidden md:block -translate-x-1/2 -translate-y-1/2">
+        <div class="w-full h-full bg-[#FFD700] rounded-full opacity-50 blur-sm"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-200">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-2 text-[#003399]">
+                    <i data-lucide="globe-2" class="w-8 h-8"></i>
+                    <span class="text-2xl font-bold text-gray-900">Euro-jobs-careers</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#jobs" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">Jobs</a>
+                    <a href="#about" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">About</a>
+                    <a href="#employers" class="text-sm text-gray-600 hover:text-gray-900 transition-colors">For Employers</a>
+                    <button class="bg-[#003399] text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-[#002a80] transition-colors">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Hero Section -->
+    <section class="relative pt-32 pb-20 px-6 min-h-[90vh] flex items-center overflow-hidden">
+        <!-- Background Path SVG -->
+                <svg id="path-svg" class="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 400 Q 300 200, 600 400 T 1200 400" stroke="#003399" stroke-width="2" />
+            <path d="M0 500 Q 400 300, 800 500 T 1200 500" stroke="#FFD700" stroke-width="2" />
+            <path d="M0 300 Q 200 100, 400 300 T 800 300 Q 1000 200, 1200 300" stroke="#708090" stroke-width="1.5" />
+            <circle cx="300" cy="200" r="4" fill="#003399" />
+            <circle cx="600" cy="400" r="4" fill="#003399" />
+            <circle cx="900" cy="200" r="4" fill="#003399" />
+            <circle cx="400" cy="300" r="4" fill="#FFD700" />
+            <circle cx="800" cy="500" r="4" fill="#FFD700" />
+        </svg>
+
+        <div class="container mx-auto relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="text-left">
+                    <span class="inline-block mb-6 px-3 py-1 bg-[#003399]/10 text-[#003399] border border-[#003399]/20 rounded-full text-sm font-medium">
+                        <i data-lucide="map-pin" class="inline-block w-4 h-4 mr-1 align-text-bottom"></i>
+                        WHERE TALENT MEETS OPPORTUNITY
+                    </span>
+                    <div id="hero-text" class="mb-8">
+                        <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+                            <div class="kinetic-line">Shaping The</div>
+                            <div class="kinetic-line text-[#003399]">Future And</div>
+                            <div class="kinetic-line">Your Business</div>
+                        </h1>
+                    </div>
+                    <p class="text-lg md:text-xl text-gray-600 mb-10 max-w-xl leading-relaxed">
+                        At Euro-jobs-careers, we specialize in connecting top-tier talent with industry-leading companies. Whether you're a candidate or a business, we have the path for you.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 items-start">
+                        <button class="bg-[#003399] text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-[#002a80] transition-all flex items-center">
+                            Explore Opportunities
+                            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200" alt="Team working" class="w-full h-auto">
+                    </div>
+                    <!-- Decorative background for image -->
+                    <div class="absolute -top-10 -right-10 w-full h-full border-2 border-[#FFD700] rounded-3xl -z-0"></div>
+
+                    <!-- Floating Card -->
+                    <div class="absolute -bottom-10 -left-10 bg-white p-6 rounded-2xl shadow-2xl border border-gray-100 flex items-center gap-4 max-w-xs z-20 parallax">
+                        <div class="w-14 h-14 bg-[#FFD700] rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+                            <i data-lucide="check" class="text-[#003399] w-8 h-8"></i>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-gray-900">12+ Years Experience</p>
+                            <p class="text-xs text-gray-500">Helping the European community grow.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trusted By Section -->
+    <section class="py-12 bg-gray-50 border-b border-gray-200">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="flex items-center gap-2">
+                    <i data-lucide="zap" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">Boltshift</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="sun" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">Nietzsche</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="coffee" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">Epicurious</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="cloud" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">CloudWatch</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="feather" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">FeatherDev</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <i data-lucide="target" class="w-6 h-6"></i>
+                    <span class="text-xl font-bold tracking-tighter">Acme Corp</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section id="stats" class="py-20 px-6 bg-white border-y border-gray-200">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-bold text-[#003399] mb-2">
+                        <span class="counter" data-target="12500">0</span>+
+                    </div>
+                    <p class="text-gray-500 text-sm md:text-base">Successful Placements</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-bold text-[#003399] mb-2">
+                        <span class="counter" data-target="850">0</span>+
+                    </div>
+                    <p class="text-gray-500 text-sm md:text-base">Partner Companies</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-bold text-[#003399] mb-2">
+                        <span class="counter" data-target="28">0</span>
+                    </div>
+                    <p class="text-gray-500 text-sm md:text-base">European Countries</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-5xl md:text-6xl font-bold text-[#003399] mb-2">
+                        <span class="counter" data-target="98">0</span>%
+                    </div>
+                    <p class="text-gray-500 text-sm md:text-base">Client Satisfaction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 overflow-hidden">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative">
+                    <!-- Image Cluster -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1522071823991-b99777152413?q=80&w=600" alt="Team meeting" class="rounded-2xl shadow-lg w-full h-64 object-cover parallax">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=600" alt="Collaboration" class="rounded-2xl shadow-lg w-full h-48 object-cover">
+                        </div>
+                        <div class="pt-12">
+                            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?q=80&w=600" alt="Office space" class="rounded-2xl shadow-lg w-full h-80 object-cover parallax">
+                        </div>
+                    </div>
+                    <!-- Decorative element -->
+                    <div class="absolute -z-10 top-0 left-0 w-full h-full bg-[#FFD700]/5 rounded-3xl blur-3xl"></div>
+                </div>
+                <div class="text-left">
+                    <span class="inline-block mb-6 px-3 py-1 bg-[#003399]/10 text-[#003399] border border-[#003399]/20 rounded-full text-sm font-medium">
+                        ABOUT EURO-JOBS-CAREERS
+                    </span>
+                    <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+                        Elevate Your Workforce, <span class="text-[#003399]">Elevate Your Business</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        At Euro-jobs-careers, we understand that the key to business success lies in having the right people on your team. That's why we're committed to connecting you with top-tier talent that matches your vision.
+                    </p>
+                    <div class="grid sm:grid-cols-2 gap-4 mb-10">
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-[#003399] rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="text-white w-4 h-4"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Tailored Staffing Solutions</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-[#003399] rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="text-white w-4 h-4"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Ongoing Support</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-[#003399] rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="text-white w-4 h-4"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Streamlined Hiring Process</span>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <div class="w-6 h-6 bg-[#003399] rounded-full flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="check" class="text-white w-4 h-4"></i>
+                            </div>
+                            <span class="font-medium text-gray-700">Expert Recruitment Team</span>
+                        </div>
+                    </div>
+                    <button class="bg-[#003399] text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-[#002a80] transition-all flex items-center">
+                        JOIN OUR NETWORK
+                        <i data-lucide="users" class="ml-2 w-5 h-5"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-gray-50 bg-grid-pattern">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block mb-4 px-3 py-1 bg-[#003399]/10 text-[#003399] border border-[#003399]/20 rounded-full text-sm font-medium">
+                    OUR SERVICE AREAS
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Tailored Solutions For Your Hiring Needs</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=600" alt="Accounting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 01</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">ACCOUNTING FINANCE</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Tailored solutions that align with your objectives. From temporary staffing to permanent placements.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600" alt="Digital Marketing" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 02</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">DIGITAL MARKETING</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Our services encompass every stage of the hiring process, from identifying to selecting top marketing talent.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=600" alt="Business Consulting" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 03</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">BUSINESS CONSULTING</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">We understand that every business is unique, which is why we take a bespoke approach to your consulting needs.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=600" alt="Technology Services" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 04</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">TECHNOLOGY SERVICES</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">We leverage our extensive network, industry expertise, and cutting-edge technology to find your IT specialists.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?q=80&w=600" alt="Logistics" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 05</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">LOGISTICS SERVICES</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">Our team of expert recruiters works closely with you to understand your logistical requirements.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2959213?q=80&w=600" alt="Front Line" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8 text-center">
+                        <span class="text-xs font-bold text-[#003399] tracking-widest uppercase mb-2 block">SERVICE 06</span>
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">FRONT LINE SUPPORT</h3>
+                        <p class="text-gray-500 text-sm mb-6 leading-relaxed">We provide flexible staffing solutions that can scale with your business and support your operations.</p>
+                        <a href="#" class="inline-flex items-center text-sm font-bold text-gray-900 hover:text-[#003399] transition-colors">
+                            LEARN MORE <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="bg-[#003399] text-white px-8 py-3 rounded-md font-bold hover:bg-[#002a80] transition-all">
+                    VIEW MORE SERVICES
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Horizontal Scrolling Jobs Section -->
+    <section id="jobs" class="py-20 overflow-hidden">
+        <div class="container mx-auto px-6 mb-12">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Featured Opportunities</h2>
+            <p class="text-xl text-gray-600">Curated positions from Europe's leading companies</p>
+        </div>
+
+        <div id="scroll-container" class="flex gap-6 px-6">
+            <div class="job-card min-w-[400px] md:min-w-[500px] p-8 border border-gray-200 bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow flex-shrink-0">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Senior Product Designer</h3>
+                        <p class="text-lg text-gray-500">Innovation Labs Berlin</p>
+                    </div>
+                    <i data-lucide="briefcase" class="w-6 h-6 text-[#003399]"></i>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        <span>Berlin, Germany</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i data-lucide="trending-up" class="w-4 h-4"></i>
+                        <span>€75,000 - €95,000</span>
+                    </div>
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Full-time</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 border border-[#003399]/30 text-[#003399] rounded-full text-xs">Design</span>
+                    <span class="px-3 py-1 border border-[#003399]/30 text-[#003399] rounded-full text-xs">UX/UI</span>
+                </div>
+                <button class="w-full bg-[#003399] text-white py-3 rounded-md font-bold hover:bg-[#002a80] transition-all flex items-center justify-center">
+                    View Details
+                    <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </button>
+            </div>
+            <div class="job-card min-w-[400px] md:min-w-[500px] p-8 border border-gray-200 bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow flex-shrink-0">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Backend Engineer</h3>
+                        <p class="text-lg text-gray-500">FinTech Solutions</p>
+                    </div>
+                    <i data-lucide="briefcase" class="w-6 h-6 text-[#003399]"></i>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        <span>Amsterdam, Netherlands</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i data-lucide="trending-up" class="w-4 h-4"></i>
+                        <span>€80,000 - €110,000</span>
+                    </div>
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Full-time</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 border border-[#003399]/30 text-[#003399] rounded-full text-xs">Engineering</span>
+                    <span class="px-3 py-1 border border-[#003399]/30 text-[#003399] rounded-full text-xs">Python</span>
+                </div>
+                <button class="w-full bg-[#003399] text-white py-3 rounded-md font-bold hover:bg-[#002a80] transition-all flex items-center justify-center">
+                    View Details
+                    <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </button>
+            </div>
+            <div class="job-card min-w-[400px] md:min-w-[500px] p-8 border border-gray-200 bg-white rounded-xl shadow-sm hover:shadow-xl transition-shadow flex-shrink-0">
+                <div class="flex items-start justify-between mb-6">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Marketing Director</h3>
+                        <p class="text-lg text-gray-500">Growth Ventures</p>
+                    </div>
+                    <i data-lucide="briefcase" class="w-6 h-6 text-[#003399]"></i>
+                </div>
+                <div class="space-y-4 mb-6">
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i data-lucide="map-pin" class="w-4 h-4"></i>
+                        <span>Paris, France</span>
+                    </div>
+                    <div class="flex items-center gap-2 text-gray-500">
+                        <i data-lucide="trending-up" class="w-4 h-4"></i>
+                        <span>€90,000 - €120,000</span>
+                    </div>
+                    <span class="inline-block px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium">Full-time</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mb-6">
+                    <span class="px-3 py-1 border border-[#003399]/30 text-[#003399] rounded-full text-xs">Marketing</span>
+                    <span class="px-3 py-1 border border-[#003399]/30 text-[#003399] rounded-full text-xs">Strategy</span>
+                </div>
+                <button class="w-full bg-[#003399] text-white py-3 rounded-md font-bold hover:bg-[#002a80] transition-all flex items-center justify-center">
+                    View Details
+                    <i data-lucide="arrow-right" class="ml-2 w-4 h-4"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+        <!-- How It Works Section -->
+    <section id="how-it-works" class="py-24 px-6 bg-white">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <span class="inline-block mb-4 px-3 py-1 bg-[#003399]/10 text-[#003399] border border-[#003399]/20 rounded-full text-sm font-medium uppercase tracking-wider">
+                    HOW IT WORKS
+                </span>
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Simple Staffing Procedures</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Step 1 -->
+                <div class="relative group">
+                    <div class="w-10 h-10 bg-[#003399] text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 relative z-10 shadow-lg">1</div>
+                    <div class="rounded-2xl overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1454165833767-027ffea9e77b?q=80&w=600" alt="Job Analysis" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-8 border border-gray-100 bg-gray-50 rounded-2xl text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">JOB ANALYSIS</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Job analysis is a critical process for understanding and defining specific requirements.</p>
+                    </div>
+                </div>
+                <!-- Step 2 -->
+                <div class="relative group">
+                    <div class="w-10 h-10 bg-[#003399] text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 relative z-10 shadow-lg">2</div>
+                    <div class="rounded-2xl overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600" alt="Applicant Review" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-8 bg-[#003399] text-white rounded-2xl text-center shadow-xl transform scale-105 z-10 relative">
+                        <h3 class="text-xl font-bold mb-4">APPLICANT REVIEW</h3>
+                        <p class="text-white/80 text-sm leading-relaxed">The applicant review process is a vital step in ensuring that only the best talent is selected.</p>
+                    </div>
+                </div>
+                <!-- Step 3 -->
+                <div class="relative group">
+                    <div class="w-10 h-10 bg-[#003399] text-white rounded-full flex items-center justify-center font-bold mx-auto mb-6 relative z-10 shadow-lg">3</div>
+                    <div class="rounded-2xl overflow-hidden mb-6 shadow-md group-hover:shadow-xl transition-shadow">
+                        <img src="https://images.unsplash.com/photo-1600880212340-02d956ea202c?q=80&w=600" alt="Job Place Check" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-8 border border-gray-100 bg-gray-50 rounded-2xl text-center">
+                        <h3 class="text-xl font-bold text-gray-900 mb-4">JOB PLACE CHECK</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Job Place Check is an essential component of our Euro-jobs-careers recruitment process.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Success Stories</h2>
+            <p class="text-xl text-gray-600">Hear from professionals who found their path</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <div class="p-8 border border-gray-200 bg-white rounded-xl">
+                <div class="flex items-center gap-1 mb-4 text-[#FFD700]">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                </div>
+                <p class="text-gray-500 mb-6 leading-relaxed">"Euro-jobs-careers transformed my career. Within 3 weeks, I had interviews with 5 companies and landed my dream role in Berlin."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#003399]/10 rounded-full flex items-center justify-center">
+                        <i data-lucide="users" class="w-6 h-6 text-[#003399]"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-semibold text-gray-900">Sarah Mitchell</p>
+                        <p class="text-sm text-gray-500">Senior Designer, Berlin</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8 border border-gray-200 bg-white rounded-xl">
+                <div class="flex items-center gap-1 mb-4 text-[#FFD700]">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                </div>
+                <p class="text-gray-500 mb-6 leading-relaxed">"The support throughout my relocation to Amsterdam was exceptional. They handled everything from visa to housing recommendations."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#003399]/10 rounded-full flex items-center justify-center">
+                        <i data-lucide="users" class="w-6 h-6 text-[#003399]"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-semibold text-gray-900">Marcus Chen</p>
+                        <p class="text-sm text-gray-500">Backend Engineer, Amsterdam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="p-8 border border-gray-200 bg-white rounded-xl">
+                <div class="flex items-center gap-1 mb-4 text-[#FFD700]">
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                </div>
+                <p class="text-gray-500 mb-6 leading-relaxed">"Professional, efficient, and genuinely invested in my success. I couldn't have asked for a better recruitment partner."</p>
+                <div class="flex items-center gap-4">
+                    <div class="w-12 h-12 bg-[#003399]/10 rounded-full flex items-center justify-center">
+                        <i data-lucide="users" class="w-6 h-6 text-[#003399]"></i>
+                    </div>
+                    <div class="text-left">
+                        <p class="font-semibold text-gray-900">Emma Rodriguez</p>
+                        <p class="text-sm text-gray-500">Marketing Director, Paris</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 px-6 bg-[#003399] text-white text-center">
+        <div class="container mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Begin Your Journey?</h2>
+            <p class="text-xl mb-12 max-w-2xl mx-auto opacity-90">Join thousands of professionals who've discovered their perfect European career opportunity with us.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <button class="bg-[#FFD700] text-[#003399] px-8 py-4 rounded-md text-lg font-bold hover:bg-[#e6c200] transition-all flex items-center">
+                    Browse All Jobs
+                    <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                </button>
+                <button class="border border-white text-white px-8 py-4 rounded-md text-lg font-bold hover:bg-white/10 transition-all">
+                    Talk to a Recruiter
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-white border-t border-gray-200">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-4 text-[#003399]">
+                        <i data-lucide="globe-2" class="w-6 h-6"></i>
+                        <span class="text-lg font-bold text-gray-900">Euro-jobs-careers</span>
+                    </div>
+                    <p class="text-sm text-gray-500 leading-relaxed">Connecting exceptional talent with extraordinary opportunities across Europe.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">For Candidates</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-[#003399]">Browse Jobs</a></li>
+                        <li><a href="#" class="hover:text-[#003399]">Career Advice</a></li>
+                        <li><a href="#" class="hover:text-[#003399]">Salary Guide</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">For Employers</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-[#003399]">Post a Job</a></li>
+                        <li><a href="#" class="hover:text-[#003399]">Pricing</a></li>
+                        <li><a href="#" class="hover:text-[#003399]">Success Stories</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-gray-900 mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-[#003399]">About Us</a></li>
+                        <li><a href="#" class="hover:text-[#003399]">Contact</a></li>
+                        <li><a href="#" class="hover:text-[#003399]">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-100 text-center text-sm text-gray-400">
+                <p>© 2024 Euro-jobs-careers. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
+.kinetic-line {
+    overflow: hidden;
+    perspective: 1000px;
+}
+
+.char {
+    display: inline-block;
+    transform-origin: center bottom;
+}
+
+#scroll-container {
+    cursor: grab;
+}
+
+#scroll-container:active {
+    cursor: grabbing;
+}
+
+/* Custom selection color */
+::selection {
+    background: rgba(255, 215, 0, 0.3);
+    color: #003399;
+}
+
+.bg-grid-pattern {
+    background-image: radial-gradient(circle, rgba(0, 51, 153, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.animate-bounce-slow {
+    animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Custom Cursor
+    const cursor = document.getElementById('cursor');
+    if (cursor) {
+        window.addEventListener('mousemove', (e) => {
+            gsap.to(cursor, {
+                x: e.clientX,
+                y: e.clientY,
+                duration: 0.3,
+                ease: 'power2.out'
+            });
+        });
+    }
+
+    // Kinetic Typography
+    const lines = document.querySelectorAll('.kinetic-line');
+    lines.forEach(line => {
+        const text = line.textContent;
+        line.innerHTML = '';
+        text.split('').forEach(char => {
+            const span = document.createElement('span');
+            span.textContent = char === ' ' ? '\u00A0' : char;
+            span.className = 'char';
+            line.appendChild(span);
+        });
+
+        const chars = line.querySelectorAll('.char');
+        gsap.from(chars, {
+            y: 100,
+            opacity: 0,
+            rotateX: -90,
+            stagger: 0.05,
+            duration: 1,
+            ease: 'power4.out',
+            scrollTrigger: {
+                trigger: line,
+                start: 'top 80%',
+            }
+        });
+
+        gsap.to(chars, {
+            scrollTrigger: {
+                trigger: line,
+                start: 'top top',
+                end: 'bottom top',
+                scrub: 1,
+            },
+            y: -50,
+            opacity: 0.3,
+            stagger: 0.02,
+        });
+    });
+
+    // Path SVG Animation
+    const paths = document.querySelectorAll('#path-svg path');
+    paths.forEach(path => {
+        const length = path.getTotalLength();
+        gsap.set(path, {
+            strokeDasharray: length,
+            strokeDashoffset: length
+        });
+        gsap.to(path, {
+            strokeDashoffset: 0,
+            scrollTrigger: {
+                trigger: path,
+                start: 'top 80%',
+                end: 'bottom 20%',
+                scrub: 1,
+            }
+        });
+    });
+
+    // Horizontal Scroll for Jobs
+    const scrollContainer = document.getElementById('scroll-container');
+    const jobCards = document.querySelectorAll('.job-card');
+    if (scrollContainer && jobCards.length > 0) {
+        gsap.to(jobCards, {
+            x: () => -(scrollContainer.scrollWidth - window.innerWidth + 48),
+            ease: 'none',
+            scrollTrigger: {
+                trigger: "#jobs",
+                start: "top top",
+                end: () => "+=" + (scrollContainer.scrollWidth),
+                scrub: 1,
+                pin: true,
+                anticipatePin: 1,
+            }
+        });
+    }
+
+    // Stats Counter
+    const counters = document.querySelectorAll('.counter');
+    counters.forEach(counter => {
+        const target = parseInt(counter.getAttribute('data-target'));
+        gsap.to(counter, {
+            innerText: target,
+            duration: 2,
+            snap: { innerText: 1 },
+            scrollTrigger: {
+                trigger: counter,
+                start: 'top 90%',
+            }
+        });
+    });
+
+    // Parallax
+    gsap.utils.toArray('.parallax').forEach(element => {
+        gsap.to(element, {
+            y: -100,
+            scrollTrigger: {
+                trigger: element,
+                start: 'top bottom',
+                end: 'bottom top',
+                scrub: true
+            }
+        });
+    });
+
+    // Entrance Animation for Services
+    gsap.from('#services .group', {
+        y: 50,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.8,
+        ease: 'power3.out',
+        scrollTrigger: {
+            trigger: '#services',
+            start: 'top 70%',
+        }
+    });
+
+    // Entrance Animation for Trusted By
+    gsap.from('.opacity-50 > div', {
+        y: 20,
+        opacity: 0,
+        stagger: 0.05,
+        duration: 0.5,
+        ease: 'power2.out',
+        scrollTrigger: {
+            trigger: '.opacity-50',
+            start: 'top 90%',
+        }
+    });
+
+    // Entrance for How It Works cards
+    gsap.from('#how-it-works .group .p-8', {
+        scale: 0.9,
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.2,
+        ease: 'back.out(1.7)',
+        scrollTrigger: {
+            trigger: '#how-it-works', // I should add this ID
+            start: 'top 80%',
+        }
+    });
+});
