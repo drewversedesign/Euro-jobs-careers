@@ -1,23 +1,52 @@
-.kinetic-line {
-    overflow: hidden;
-    perspective: 1000px;
+:root {
+    --primary: #2ba24c;
+    --secondary: #111827;
 }
 
-.char {
-    display: inline-block;
-    transform-origin: center bottom;
+body {
+    background-color: #ffffff;
 }
 
-#scroll-container {
-    cursor: grab;
+/* Custom transitions */
+.transition-all {
+    transition: all 0.3s ease;
 }
 
-#scroll-container:active {
-    cursor: grabbing;
+/* Floating badge animation */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
 }
 
-/* Custom selection color */
-::selection {
-    background: rgba(255, 215, 0, 0.3);
-    color: #003399;
+.parallax {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Service card hover effect */
+.group:hover img {
+    transform: scale(1.05);
+}
+
+/* Navigation blur effect */
+nav {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2ba24c;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1e7e3a;
 }
